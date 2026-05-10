@@ -8,8 +8,8 @@ import joblib
 import pandas as pd
 from openai import OpenAI
 
-MODEL_PATH = "rf.joblib"
-ENCODINGS_PATH = "encodings.json"
+MODEL_PATH = "/Users/navneet/Documents/GitHub/DSCI-531-Project/dsci531 llm/rf.joblib"
+ENCODINGS_PATH = "/Users/navneet/Documents/GitHub/DSCI-531-Project/dsci531 llm/encodings.json"
 
 
 def load_model_and_encodings():
