@@ -1,0 +1,191 @@
+student_id,vary_feature,swept_value,is_baseline,gpa,act_score,household_income,gender,race,admit_probability
+S001,race,asian,False,3.5,18.0,85000.0,F,asian,0.33
+S001,race,black or african american,True,3.5,18.0,85000.0,F,black or african american,0.45
+S001,race,hispanic or latino,False,3.5,18.0,85000.0,F,hispanic or latino,0.06
+S001,race,other/underrepresented,False,3.5,18.0,85000.0,F,other/underrepresented,0.09
+S001,race,white,False,3.5,18.0,85000.0,F,white,0.44
+S002,household_income,15000,False,2.8,21.0,15000.0,M,asian,0.53
+S002,household_income,40000,False,2.8,21.0,40000.0,M,asian,0.58
+S002,household_income,85000,False,2.8,21.0,85000.0,M,asian,0.65
+S002,household_income,180000,False,2.8,21.0,180000.0,M,asian,0.54
+S003,gender,F,True,2.64,24.0,60000.0,F,white,0.32
+S003,gender,M,False,2.64,24.0,60000.0,M,white,0.33
+S004,gpa,3.0,False,3.0,35.0,180000.0,F,other/underrepresented,0.06
+S004,gpa,3.4,False,3.4,35.0,180000.0,F,other/underrepresented,0.3
+S004,gpa,3.7,False,3.7,35.0,180000.0,F,other/underrepresented,0.38
+S004,gpa,4.0,False,4.0,35.0,180000.0,F,other/underrepresented,0.63
+S005,act_score,22,False,3.42,22.0,40000.0,M,hispanic or latino,0.19
+S005,act_score,26,False,3.42,26.0,40000.0,M,hispanic or latino,0.19
+S005,act_score,30,False,3.42,30.0,40000.0,M,hispanic or latino,0.3
+S005,act_score,34,False,3.42,34.0,40000.0,M,hispanic or latino,0.31
+S006,race,asian,True,2.99,24.0,120000.0,F,asian,0.66
+S006,race,black or african american,False,2.99,24.0,120000.0,F,black or african american,0.38
+S006,race,hispanic or latino,False,2.99,24.0,120000.0,F,hispanic or latino,0.29
+S006,race,other/underrepresented,False,2.99,24.0,120000.0,F,other/underrepresented,0.26
+S006,race,white,False,2.99,24.0,120000.0,F,white,0.33
+S007,household_income,15000,False,3.13,29.0,15000.0,M,asian,0.4
+S007,household_income,40000,False,3.13,29.0,40000.0,M,asian,0.35
+S007,household_income,85000,False,3.13,29.0,85000.0,M,asian,0.63
+S007,household_income,180000,False,3.13,29.0,180000.0,M,asian,0.45
+S008,gender,F,False,3.62,35.0,25000.0,F,asian,0.26
+S008,gender,M,True,3.62,35.0,25000.0,M,asian,0.16
+S009,gpa,3.0,False,3.0,29.0,60000.0,F,asian,0.56
+S009,gpa,3.4,False,3.4,29.0,60000.0,F,asian,0.16
+S009,gpa,3.7,False,3.7,29.0,60000.0,F,asian,0.04
+S009,gpa,4.0,False,4.0,29.0,60000.0,F,asian,0.46
+S010,act_score,22,False,3.53,22.0,25000.0,F,asian,0.32
+S010,act_score,26,False,3.53,26.0,25000.0,F,asian,0.32
+S010,act_score,30,False,3.53,30.0,25000.0,F,asian,0.35
+S010,act_score,34,False,3.53,34.0,25000.0,F,asian,0.63
+S011,race,asian,False,3.13,32.0,120000.0,F,asian,0.39
+S011,race,black or african american,False,3.13,32.0,120000.0,F,black or african american,0.26
+S011,race,hispanic or latino,True,3.13,32.0,120000.0,F,hispanic or latino,0.46
+S011,race,other/underrepresented,False,3.13,32.0,120000.0,F,other/underrepresented,0.4
+S011,race,white,False,3.13,32.0,120000.0,F,white,0.51
+S012,household_income,15000,False,3.1,26.0,15000.0,F,white,0.15
+S012,household_income,40000,False,3.1,26.0,40000.0,F,white,0.23
+S012,household_income,85000,False,3.1,26.0,85000.0,F,white,0.32
+S012,household_income,180000,False,3.1,26.0,180000.0,F,white,0.08
+S013,gender,F,False,3.62,23.0,250000.0,F,hispanic or latino,0.25
+S013,gender,M,True,3.62,23.0,250000.0,M,hispanic or latino,0.18
+S014,gpa,3.0,False,3.0,35.0,60000.0,M,asian,0.64
+S014,gpa,3.4,False,3.4,35.0,60000.0,M,asian,0.64
+S014,gpa,3.7,False,3.7,35.0,60000.0,M,asian,0.13
+S014,gpa,4.0,False,4.0,35.0,60000.0,M,asian,0.21
+S015,act_score,22,False,2.92,22.0,120000.0,M,hispanic or latino,0.17
+S015,act_score,26,False,2.92,26.0,120000.0,M,hispanic or latino,0.17
+S015,act_score,30,False,2.92,30.0,120000.0,M,hispanic or latino,0.25
+S015,act_score,34,False,2.92,34.0,120000.0,M,hispanic or latino,0.26
+S016,race,asian,False,2.69,28.0,60000.0,M,asian,0.59
+S016,race,black or african american,False,2.69,28.0,60000.0,M,black or african american,0.19
+S016,race,hispanic or latino,False,2.69,28.0,60000.0,M,hispanic or latino,0.24
+S016,race,other/underrepresented,True,2.69,28.0,60000.0,M,other/underrepresented,0.27
+S016,race,white,False,2.69,28.0,60000.0,M,white,0.33
+S017,household_income,15000,False,3.84,32.0,15000.0,M,black or african american,0.43
+S017,household_income,40000,True,3.84,32.0,40000.0,M,black or african american,0.67
+S017,household_income,85000,False,3.84,32.0,85000.0,M,black or african american,0.25
+S017,household_income,180000,False,3.84,32.0,180000.0,M,black or african american,0.27
+S018,gender,F,False,2.95,35.0,85000.0,F,white,0.76
+S018,gender,M,True,2.95,35.0,85000.0,M,white,0.66
+S019,gpa,3.0,False,3.0,25.0,40000.0,M,asian,0.6
+S019,gpa,3.4,False,3.4,25.0,40000.0,M,asian,0.16
+S019,gpa,3.7,False,3.7,25.0,40000.0,M,asian,0.11
+S019,gpa,4.0,False,4.0,25.0,40000.0,M,asian,0.34
+S020,act_score,22,False,3.66,22.0,40000.0,F,other/underrepresented,0.07
+S020,act_score,26,False,3.66,26.0,40000.0,F,other/underrepresented,0.07
+S020,act_score,30,False,3.66,30.0,40000.0,F,other/underrepresented,0.14
+S020,act_score,34,False,3.66,34.0,40000.0,F,other/underrepresented,0.16
+S021,race,asian,False,3.43,30.0,180000.0,M,asian,0.13
+S021,race,black or african american,False,3.43,30.0,180000.0,M,black or african american,0.19
+S021,race,hispanic or latino,False,3.43,30.0,180000.0,M,hispanic or latino,0.26
+S021,race,other/underrepresented,False,3.43,30.0,180000.0,M,other/underrepresented,0.21
+S021,race,white,True,3.43,30.0,180000.0,M,white,0.05
+S022,household_income,15000,True,2.95,35.0,15000.0,F,white,0.44
+S022,household_income,40000,False,2.95,35.0,40000.0,F,white,0.56
+S022,household_income,85000,False,2.95,35.0,85000.0,F,white,0.76
+S022,household_income,180000,False,2.95,35.0,180000.0,F,white,0.51
+S023,gender,F,False,3.65,28.0,25000.0,F,other/underrepresented,0.08
+S023,gender,M,True,3.65,28.0,25000.0,M,other/underrepresented,0.21
+S024,gpa,3.0,False,3.0,18.0,85000.0,F,white,0.29
+S024,gpa,3.4,False,3.4,18.0,85000.0,F,white,0.39
+S024,gpa,3.7,False,3.7,18.0,85000.0,F,white,0.56
+S024,gpa,4.0,False,4.0,18.0,85000.0,F,white,0.29
+S025,act_score,22,False,3.88,22.0,60000.0,F,hispanic or latino,0.2
+S025,act_score,26,False,3.88,26.0,60000.0,F,hispanic or latino,0.2
+S025,act_score,30,False,3.88,30.0,60000.0,F,hispanic or latino,0.25
+S025,act_score,34,False,3.88,34.0,60000.0,F,hispanic or latino,0.73
+S026,race,asian,False,3.67,35.0,15000.0,M,asian,0.11
+S026,race,black or african american,False,3.67,35.0,15000.0,M,black or african american,0.17
+S026,race,hispanic or latino,False,3.67,35.0,15000.0,M,hispanic or latino,0.05
+S026,race,other/underrepresented,True,3.67,35.0,15000.0,M,other/underrepresented,0.05
+S026,race,white,False,3.67,35.0,15000.0,M,white,0.08
+S027,household_income,15000,False,2.63,29.0,15000.0,F,asian,0.49
+S027,household_income,40000,False,2.63,29.0,40000.0,F,asian,0.54
+S027,household_income,85000,True,2.63,29.0,85000.0,F,asian,0.6
+S027,household_income,180000,False,2.63,29.0,180000.0,F,asian,0.46
+S028,gender,F,False,2.94,20.0,25000.0,F,asian,0.53
+S028,gender,M,True,2.94,20.0,25000.0,M,asian,0.6
+S029,gpa,3.0,False,3.0,35.0,40000.0,F,other/underrepresented,0.35
+S029,gpa,3.4,False,3.4,35.0,40000.0,F,other/underrepresented,0.18
+S029,gpa,3.7,False,3.7,35.0,40000.0,F,other/underrepresented,0.15
+S029,gpa,4.0,False,4.0,35.0,40000.0,F,other/underrepresented,0.56
+S030,act_score,22,False,3.93,22.0,85000.0,M,black or african american,0.45
+S030,act_score,26,False,3.93,26.0,85000.0,M,black or african american,0.45
+S030,act_score,30,False,3.93,30.0,85000.0,M,black or african american,0.48
+S030,act_score,34,False,3.93,34.0,85000.0,M,black or african american,0.59
+S031,race,asian,False,3.9,24.0,85000.0,M,asian,0.21
+S031,race,black or african american,False,3.9,24.0,85000.0,M,black or african american,0.28
+S031,race,hispanic or latino,True,3.9,24.0,85000.0,M,hispanic or latino,0.33
+S031,race,other/underrepresented,False,3.9,24.0,85000.0,M,other/underrepresented,0.31
+S031,race,white,False,3.9,24.0,85000.0,M,white,0.34
+S032,household_income,15000,False,3.21,34.0,15000.0,F,black or african american,0.5
+S032,household_income,40000,False,3.21,34.0,40000.0,F,black or african american,0.31
+S032,household_income,85000,False,3.21,34.0,85000.0,F,black or african american,0.23
+S032,household_income,180000,False,3.21,34.0,180000.0,F,black or african american,0.2
+S033,gender,F,True,2.91,28.0,15000.0,F,white,0.23
+S033,gender,M,False,2.91,28.0,15000.0,M,white,0.22
+S034,gpa,3.0,False,3.0,20.0,15000.0,F,asian,0.49
+S034,gpa,3.4,False,3.4,20.0,15000.0,F,asian,0.25
+S034,gpa,3.7,False,3.7,20.0,15000.0,F,asian,0.2
+S034,gpa,4.0,False,4.0,20.0,15000.0,F,asian,0.45
+S035,act_score,22,False,3.87,22.0,25000.0,F,hispanic or latino,0.2
+S035,act_score,26,False,3.87,26.0,25000.0,F,hispanic or latino,0.2
+S035,act_score,30,False,3.87,30.0,25000.0,F,hispanic or latino,0.24
+S035,act_score,34,False,3.87,34.0,25000.0,F,hispanic or latino,0.49
+S036,race,asian,False,3.54,24.0,40000.0,M,asian,0.15
+S036,race,black or african american,True,3.54,24.0,40000.0,M,black or african american,0.12
+S036,race,hispanic or latino,False,3.54,24.0,40000.0,M,hispanic or latino,0.32
+S036,race,other/underrepresented,False,3.54,24.0,40000.0,M,other/underrepresented,0.18
+S036,race,white,False,3.54,24.0,40000.0,M,white,0.31
+S037,household_income,15000,False,3.7,31.0,15000.0,F,asian,0.46
+S037,household_income,40000,False,3.7,31.0,40000.0,F,asian,0.34
+S037,household_income,85000,False,3.7,31.0,85000.0,F,asian,0.15
+S037,household_income,180000,False,3.7,31.0,180000.0,F,asian,0.1
+S038,gender,F,False,3.52,29.0,180000.0,F,other/underrepresented,0.12
+S038,gender,M,True,3.52,29.0,180000.0,M,other/underrepresented,0.27
+S039,gpa,3.0,False,3.0,19.0,25000.0,F,other/underrepresented,0.18
+S039,gpa,3.4,False,3.4,19.0,25000.0,F,other/underrepresented,0.07
+S039,gpa,3.7,False,3.7,19.0,25000.0,F,other/underrepresented,0.1
+S039,gpa,4.0,False,4.0,19.0,25000.0,F,other/underrepresented,0.39
+S040,act_score,22,False,3.62,22.0,60000.0,F,black or african american,0.15
+S040,act_score,26,False,3.62,26.0,60000.0,F,black or african american,0.15
+S040,act_score,30,False,3.62,30.0,60000.0,F,black or african american,0.13
+S040,act_score,34,False,3.62,34.0,60000.0,F,black or african american,0.39
+S041,race,asian,False,3.35,22.0,180000.0,F,asian,0.24
+S041,race,black or african american,False,3.35,22.0,180000.0,F,black or african american,0.26
+S041,race,hispanic or latino,True,3.35,22.0,180000.0,F,hispanic or latino,0.16
+S041,race,other/underrepresented,False,3.35,22.0,180000.0,F,other/underrepresented,0.11
+S041,race,white,False,3.35,22.0,180000.0,F,white,0.1
+S042,household_income,15000,False,3.25,20.0,15000.0,F,asian,0.39
+S042,household_income,40000,False,3.25,20.0,40000.0,F,asian,0.24
+S042,household_income,85000,False,3.25,20.0,85000.0,F,asian,0.46
+S042,household_income,180000,False,3.25,20.0,180000.0,F,asian,0.12
+S043,gender,F,True,3.51,35.0,15000.0,F,black or african american,0.28
+S043,gender,M,False,3.51,35.0,15000.0,M,black or african american,0.22
+S044,gpa,3.0,False,3.0,33.0,250000.0,F,other/underrepresented,0.38
+S044,gpa,3.4,False,3.4,33.0,250000.0,F,other/underrepresented,0.21
+S044,gpa,3.7,False,3.7,33.0,250000.0,F,other/underrepresented,0.37
+S044,gpa,4.0,False,4.0,33.0,250000.0,F,other/underrepresented,0.51
+S045,act_score,22,False,3.86,22.0,180000.0,F,other/underrepresented,0.33
+S045,act_score,26,False,3.86,26.0,180000.0,F,other/underrepresented,0.33
+S045,act_score,30,False,3.86,30.0,180000.0,F,other/underrepresented,0.27
+S045,act_score,34,False,3.86,34.0,180000.0,F,other/underrepresented,0.52
+S046,race,asian,False,2.97,32.0,85000.0,M,asian,0.61
+S046,race,black or african american,False,2.97,32.0,85000.0,M,black or african american,0.05
+S046,race,hispanic or latino,False,2.97,32.0,85000.0,M,hispanic or latino,0.09
+S046,race,other/underrepresented,False,2.97,32.0,85000.0,M,other/underrepresented,0.2
+S046,race,white,True,2.97,32.0,85000.0,M,white,0.33
+S047,household_income,15000,False,3.53,33.0,15000.0,F,hispanic or latino,0.16
+S047,household_income,40000,True,3.53,33.0,40000.0,F,hispanic or latino,0.34
+S047,household_income,85000,False,3.53,33.0,85000.0,F,hispanic or latino,0.07
+S047,household_income,180000,False,3.53,33.0,180000.0,F,hispanic or latino,0.55
+S048,gender,F,False,2.9,19.0,15000.0,F,asian,0.51
+S048,gender,M,True,2.9,19.0,15000.0,M,asian,0.55
+S049,gpa,3.0,False,3.0,33.0,40000.0,F,white,0.68
+S049,gpa,3.4,False,3.4,33.0,40000.0,F,white,0.85
+S049,gpa,3.7,False,3.7,33.0,40000.0,F,white,0.56
+S049,gpa,4.0,False,4.0,33.0,40000.0,F,white,0.23
+S050,act_score,22,False,2.71,22.0,25000.0,F,black or african american,0.32
+S050,act_score,26,False,2.71,26.0,25000.0,F,black or african american,0.32
+S050,act_score,30,False,2.71,30.0,25000.0,F,black or african american,0.26
+S050,act_score,34,False,2.71,34.0,25000.0,F,black or african american,0.24

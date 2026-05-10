@@ -1,0 +1,20 @@
+{
+  "features_in_order": [
+    "gpa",
+    "act_score",
+    "household_income",
+    "gender_enc",
+    "race_enc"
+  ],
+  "gender_map": {
+    "F": 0,
+    "M": 1
+  },
+  "race_map": {
+    "asian": 0,
+    "black or african american": 1,
+    "hispanic or latino": 2,
+    "other/underrepresented": 3,
+    "white": 4
+  }
+}
