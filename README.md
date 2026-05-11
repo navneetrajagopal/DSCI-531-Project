@@ -7,7 +7,10 @@ A class project on fairness in machine-learning–based college admissions decis
 ```
 .
 ├── eda_and_modeling/
-│   └── dsci_531_project_v2.ipynb   # EDA, model training, fairness analysis, model export
+│   ├── dsci_531_project_v2.ipynb   # EDA, model training, fairness analysis, model export
+│   ├── college-admission-dataset.csv  # Applicant-level admissions data (primary modeling set)
+│   ├── Dataset - 2021.csv          # Enrollment data by race/gender across institutions
+│   └── Data-Table 1.csv            # IPEDS institution-level data
 └── llm/
     ├── gpt_llm.py                  # "Chance me" chatbot wrapping the trained random forest
     ├── run_bias_sweep.py           # Batch script: counterfactual sweep + bias chart
@@ -23,7 +26,7 @@ A class project on fairness in machine-learning–based college admissions decis
 
 ### 1. Modeling and fairness analysis (`eda_and_modeling/`)
 
-We train logistic regression and random forest classifiers on a college admissions dataset using GPA, test scores, household income, gender, and race. We then evaluate the random forest under two fairness criteria — demographic parity and equalized odds — and repeat the analysis with demographic variables removed.
+We train logistic regression and random forest classifiers on a college admissions dataset using GPA, test scores, household income, gender, and race. We then evaluate the random forest under two fairness criteria — demographic parity and equalized odds — and repeat the analysis with demographic variables removed. The notebook also pulls in two supporting datasets (`Dataset - 2021.csv` for enrollment patterns by race and gender, and `Data-Table 1.csv` for institution-level IPEDS data) to contextualize the applicant-level findings.
 
 The headline finding is that the models trained on traditional features systematically produce different outcomes across demographic groups, violating both fairness criteria. Removing explicit demographic variables does not eliminate the disparities, because household income (the single most important feature, at roughly 50% importance in the random forest) acts as a proxy for demographics.
 
@@ -48,6 +51,10 @@ pip install scikit-learn pandas joblib openpyxl matplotlib numpy openai
 ```
 
 `openai` is only needed to run the interactive chatbot. The bias sweep imports from `gpt_llm.py` but never makes an API call, so the sweep works without an API key.
+
+### Reproduce the notebook
+
+Open `eda_and_modeling/dsci_531_project_v2.ipynb` in Jupyter and run all cells. The three CSV datasets sit next to it in the same folder, so no path changes are needed.
 
 ### Run the chatbot
 
