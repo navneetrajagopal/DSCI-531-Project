@@ -2,35 +2,38 @@
 
 A class project on fairness in machine-learning–based college admissions decisions. We train classifiers on a college admissions dataset, evaluate them under standard fairness criteria (demographic parity and equalized odds), wrap the trained model in an LLM-driven "chance me" chatbot, and run a counterfactual sweep to measure how much a single feature can swing the model's prediction for the same student.
 
-## Repository contents
+## Repository structure
 
-| File | Purpose |
-| --- | --- |
-| `dsci_531_project_v2.ipynb` | Main notebook: EDA, model training, fairness analysis, model export. |
-| `gpt_llm.py` | "Chance me" chatbot. Wraps the trained random forest in a GPT-4o-mini chat agent that collects student inputs and explains the model's prediction. |
-| `run_bias_sweep.py` | Batch script that runs 50 student profiles through a counterfactual sweep and produces a bias chart. |
-| `students.xlsx` | Input file for the sweep: 50 baseline profiles with a `vary_feature` column. |
-| `rf.joblib` | Trained random forest exported from the notebook. |
-| `encodings.json` | Feature order and label encodings for gender and race. |
-| `predictions.csv` | Output of the sweep — one row per (student, swept value). |
-| `bias_summary.csv` | Per-student probability range across each sweep. |
-| `bias_chart.png` | Two-panel chart summarizing the bias findings. |
+```
+.
+├── eda_and_modeling/
+│   └── dsci_531_project_v2.ipynb   # EDA, model training, fairness analysis, model export
+└── llm/
+    ├── gpt_llm.py                  # "Chance me" chatbot wrapping the trained random forest
+    ├── run_bias_sweep.py           # Batch script: counterfactual sweep + bias chart
+    ├── students.xlsx               # 50 baseline student profiles (input to the sweep)
+    ├── rf.joblib                   # Trained random forest exported from the notebook
+    ├── encodings.json              # Feature order + label encodings for gender and race
+    ├── predictions.csv             # Sweep output: one row per (student, swept value)
+    ├── bias_summary.csv            # Per-student probability range across each sweep
+    └── bias_chart.png              # Two-panel chart summarizing bias findings
+```
 
 ## What the project does
 
-### 1. Modeling and fairness analysis (notebook)
+### 1. Modeling and fairness analysis (`eda_and_modeling/`)
 
 We train logistic regression and random forest classifiers on a college admissions dataset using GPA, test scores, household income, gender, and race. We then evaluate the random forest under two fairness criteria — demographic parity and equalized odds — and repeat the analysis with demographic variables removed.
 
-The headline finding from the notebook is that the models trained on traditional features systematically produce different outcomes across demographic groups, violating both fairness criteria. Removing explicit demographic variables does not eliminate the disparities, because household income (the single most important feature, at roughly 50% importance in the random forest) acts as a proxy for demographics.
+The headline finding is that the models trained on traditional features systematically produce different outcomes across demographic groups, violating both fairness criteria. Removing explicit demographic variables does not eliminate the disparities, because household income (the single most important feature, at roughly 50% importance in the random forest) acts as a proxy for demographics.
 
-### 2. LLM wrapper (`gpt_llm.py`)
+### 2. LLM wrapper (`llm/gpt_llm.py`)
 
 We wrapped the trained random forest in a GPT-4o-mini chat interface that behaves like a "chance me" advisor. The language model conversationally collects five inputs from the student (GPA, ACT, household income, gender, race), passes them to the random forest, and explains the resulting admit probability along with the features that most influenced it. The system prompt instructs the model to flag the project's fairness findings — demographic-parity and equalized-odds violations, and household income as a proxy for demographics — when discussing the result.
 
 The LLM does not change any probabilities. The random forest is the predictor; GPT is the interview layer and the explainer.
 
-### 3. Counterfactual bias sweep (`run_bias_sweep.py`)
+### 3. Counterfactual bias sweep (`llm/run_bias_sweep.py`)
 
 To measure how sensitive the model is to a single attribute, we ran 50 student profiles through a counterfactual sweep. For each student we held four features fixed and varied the fifth across a grid, isolating the model's response to that one attribute (190 predictions total). This is the cleanest way to operationalize individual-level bias: same student, change one thing, see how the prediction moves.
 
@@ -49,6 +52,7 @@ pip install scikit-learn pandas joblib openpyxl matplotlib numpy openai
 ### Run the chatbot
 
 ```
+cd llm
 export OPENAI_API_KEY="sk-..."
 python gpt_llm.py
 ```
@@ -56,6 +60,7 @@ python gpt_llm.py
 ### Run the bias sweep
 
 ```
+cd llm
 python run_bias_sweep.py
 ```
 
@@ -70,4 +75,4 @@ This reads `students.xlsx`, writes `predictions.csv` and `bias_summary.csv`, and
 
 ## Authors
 
-DSCI 531 project team.
+Vyomsarit Singh and Navneet Rajagopal
