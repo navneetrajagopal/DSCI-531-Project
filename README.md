@@ -26,7 +26,7 @@ A class project on fairness in machine-learning–based college admissions decis
 
 ### 1. Modeling and fairness analysis (`eda_and_modeling/`)
 
-We train logistic regression and random forest classifiers on a college admissions dataset using GPA, test scores, household income, gender, and race. We then evaluate the random forest under two fairness criteria — demographic parity and equalized odds — and repeat the analysis with demographic variables removed. The notebook also pulls in two supporting datasets (`Dataset - 2021.csv` for enrollment patterns by race and gender, and `Data-Table 1.csv` for institution-level IPEDS data) to contextualize the applicant-level findings.
+We train logistic regression and random forest classifiers on a college admissions dataset using GPA, test scores, household income, gender, and race. We then evaluate the random forest under two fairness criteria — demographic parity and equalized odds — and repeat the analysis with demographic variables removed. 
 
 The headline finding is that the models trained on traditional features systematically produce different outcomes across demographic groups, violating both fairness criteria. Removing explicit demographic variables does not eliminate the disparities, because household income (the single most important feature, at roughly 50% importance in the random forest) acts as a proxy for demographics.
 
@@ -38,7 +38,7 @@ The LLM does not change any probabilities. The random forest is the predictor; G
 
 ### 3. Counterfactual bias sweep (`llm/run_bias_sweep.py`)
 
-To measure how sensitive the model is to a single attribute, we ran 50 student profiles through a counterfactual sweep. For each student we held four features fixed and varied the fifth across a grid, isolating the model's response to that one attribute (190 predictions total). This is the cleanest way to operationalize individual-level bias: same student, change one thing, see how the prediction moves.
+To measure how sensitive the model is to a single attribute, we ran 50 student profiles through a counterfactual sweep. For each student we held four features fixed and varied the fifth across a grid, isolating the model's response to that one attribute (190 predictions total). T
 
 GPA produced the largest within-student probability swings (mean range 0.43), which is expected since it's a legitimate academic signal. Race and household income were nearly as influential (0.28 and 0.30), while gender was negligible (0.07). Holding every other feature constant and varying only race, the mean predicted admit probability ranged from 0.21 (other/underrepresented) to 0.34 (asian) — a 13-percentage-point gap driven by race alone. Because the predictions came directly from the random forest rather than the language model, this bias reflects the underlying classifier itself and cannot be attributed to GPT.
 
@@ -50,11 +50,11 @@ GPA produced the largest within-student probability swings (mean range 0.43), wh
 pip install scikit-learn pandas joblib openpyxl matplotlib numpy openai
 ```
 
-`openai` is only needed to run the interactive chatbot. The bias sweep imports from `gpt_llm.py` but never makes an API call, so the sweep works without an API key.
+`openai` is only needed to run the interactive chatbot.
 
 ### Reproduce the notebook
 
-Open `eda_and_modeling/dsci_531_project_v2.ipynb` in Jupyter and run all cells. The three CSV datasets sit next to it in the same folder, so no path changes are needed.
+Open `eda_and_modeling/dsci_531_project_v2.ipynb` in Jupyter and run all cells. The three CSV datasets sit next to it in the same folder
 
 ### Run the chatbot
 
@@ -71,7 +71,7 @@ cd llm
 python run_bias_sweep.py
 ```
 
-This reads `students.xlsx`, writes `predictions.csv` and `bias_summary.csv`, and saves `bias_chart.png`. To test different profiles, edit `students.xlsx` and rerun.
+This reads `students.xlsx`, writes `predictions.csv` and `bias_summary.csv`, and saves `bias_chart.png`. 
 
 ## Limitations
 
