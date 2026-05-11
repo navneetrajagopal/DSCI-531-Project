@@ -8,18 +8,18 @@ A class project on fairness in machine-learning–based college admissions decis
 .
 ├── eda_and_modeling/
 │   ├── dsci_531_project_v2.ipynb   # EDA, model training, fairness analysis, model export
-│   ├── college-admission-dataset.csv  # Applicant-level admissions data (primary modeling set)
-│   ├── Dataset - 2021.csv          # Enrollment data by race/gender across institutions
-│   └── Data-Table 1.csv            # IPEDS institution-level data
+│   ├── college-admission-dataset.csv  
+│   ├── Dataset - 2021.csv          
+│   └── Data-Table 1.csv            
 └── llm/
     ├── gpt_llm.py                  # "Chance me" chatbot wrapping the trained random forest
-    ├── run_bias_sweep.py           # Batch script: counterfactual sweep + bias chart
-    ├── students.xlsx               # 50 baseline student profiles (input to the sweep)
+    ├── run_bias_sweep.py           # Batch script:  sweep of 50 students + bias chart
+    ├── students.xlsx               
     ├── rf.joblib                   # Trained random forest exported from the notebook
-    ├── encodings.json              # Feature order + label encodings for gender and race
-    ├── predictions.csv             # Sweep output: one row per (student, swept value)
-    ├── bias_summary.csv            # Per-student probability range across each sweep
-    └── bias_chart.png              # Two-panel chart summarizing bias findings
+    ├── encodings.json             
+    ├── predictions.csv            
+    ├── bias_summary.csv            
+    └── bias_chart.png              
 ```
 
 ## What the project does
